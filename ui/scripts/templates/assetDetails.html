@@ -1,0 +1,22 @@
+<div>
+    <h2> Edit an Asset</h2>
+    <div class="col-lg-4">
+        Type : <select ng-model="currentAsset.type">
+                    <option>Fixed</option>
+                    <option>Lease</option>
+                    <option>Inherited</option>
+               </select>
+    </div>
+    <div>
+        Name : <input type="text" ng-model="currentAsset.name" required />
+    </div>
+    <div>
+        Owner : <input type="text" ng-model="currentAsset.owner" required />
+    </div>
+    <div>
+        Cost in Rs : <input type="text" ng-model="currentAsset.Cost" required />
+    </div>
+    <div>
+        Location : <input type="text" ng-model="currentAsset.location" required />
+    </div>
+</div>

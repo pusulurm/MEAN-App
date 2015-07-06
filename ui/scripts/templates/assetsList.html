@@ -1,0 +1,22 @@
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Owner</th>
+            <th>Cost in Rs</th>
+            <th>Location</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="asset in assets">
+            <td><span ng-bind="asset.type"></span> </td>
+            <td><span ng-bind="asset.name"></span> </td>
+            <td><span ng-bind="asset.owner"></span> </td>
+            <td><span ng-bind="asset.Cost"></span> </td>
+            <td><span ng-bind="asset.location"></span> </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
