@@ -2,11 +2,15 @@ var express = require("express");
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var router = express.Router();
-
+var fs = require("fs");
+var path = require("path");
 app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({"extended" :true}));
 app.use(router);
+var rootpath = "./node_modules";
+app.use(express.static(rootpath));
+app.use(express.static("./ui"));
 
 function indexHTML(req, res) {
 
