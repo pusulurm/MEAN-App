@@ -1,17 +1,23 @@
     requirejs.config({
             baseurl : "",
             waitSeconds : 15,
-            deps : ["app"],
+            deps : ["mainModule"],
             paths :{
                 'jquery' : "jquery/dist/jquery",
                 'angular' : "angular/angular",
-                'app' : "scripts/js/app",
+                'mainModule' : "scripts/js/assets/_module",
                 'uirouter' : "angular-ui-router/build/angular-ui-router",
                 'bootstrap' : "bootstrap/dist/js/bootstrap"
             },
             shim : {
-                'angular' : ["jquery"],
-                'uirouter' : ["angular"]
+                'angular' : {
+                    "exports": "angular",
+                    "deps": ["jquery"]
+                },
+                'uirouter' : {
+                    "exports": "uirouter",
+                    "deps": ["angular"]
+                }
             }
         }
     );
